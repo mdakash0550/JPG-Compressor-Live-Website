@@ -1,0 +1,6 @@
+{
+  "name": "JPG Compressor",
+  "description": "Free online batch JPG and image compressor created by Akash, a Bangladeshi web developer. Compress JPG, PNG, and WebP files up to 80% without losing quality.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
