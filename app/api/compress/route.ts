@@ -1,7 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server';
 import sharp from 'sharp';
 
-const TINIFY_API_KEY = process.env.TINIFY_API_KEY || '';
+const TINIFY_API_KEY = process.env.TINIFY_API_KEY || 'lRnVLT1hhwWmlnkBtCrTgcj3YYly42Y0';
 
 interface CompressionResult {
   imageBuffer: Buffer;

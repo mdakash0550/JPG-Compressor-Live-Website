@@ -1,6 +1,6 @@
 import { NextResponse } from 'next/server';
 
-const TINIFY_API_KEY = process.env.TINIFY_API_KEY || '';
+const TINIFY_API_KEY = process.env.TINIFY_API_KEY || 'lRnVLT1hhwWmlnkBtCrTgcj3YYly42Y0';
 
 export async function GET() {
   try {
