@@ -9,7 +9,10 @@ export const viewport: Viewport = {
   maximumScale: 5,
 };
 
+const BASE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://jpg-compressor.vercel.app';
+
 export const metadata: Metadata = {
+  metadataBase: new URL(BASE_URL),
   title: {
     default: 'JPG Compressor | Fast Online Batch Image Size Reducer & Optimizer',
     template: '%s | JPG Compressor',
@@ -61,6 +64,7 @@ export const metadata: Metadata = {
     type: 'website',
     locale: 'en_US',
     siteName: 'JPG Compressor',
+    url: BASE_URL,
   },
   twitter: {
     card: 'summary_large_image',
@@ -69,7 +73,7 @@ export const metadata: Metadata = {
       'Reduce JPG and photo file sizes instantly online with lossless clarity. Developed by Akash, Bangladeshi Web Developer.',
   },
   alternates: {
-    canonical: '/',
+    canonical: BASE_URL,
   },
   verification: {
     google: '0fjxQfwx8lDkG3zx2xNGq4T4xWMWt4jWX3YyMZfPt3I',

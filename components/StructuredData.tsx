@@ -1,14 +1,16 @@
 import React from 'react';
 
+const BASE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://jpg-compressor.vercel.app';
+
 export function StructuredData() {
   const jsonLd = {
     '@context': 'https://schema.org',
     '@graph': [
       {
         '@type': 'WebApplication',
-        '@id': 'https://jpg-compressor.app/#webapp',
+        '@id': `${BASE_URL}/#webapp`,
         name: 'JPG Compressor',
-        url: 'https://jpg-compressor.app',
+        url: BASE_URL,
         description:
           'Free online batch JPG and image compressor developed by Akash, a Bangladeshi web developer. Reduce JPG, JPEG, PNG, and WebP file sizes up to 80% with lossless clarity.',
         applicationCategory: 'MultimediaApplication',
@@ -21,7 +23,7 @@ export function StructuredData() {
         },
         author: {
           '@type': 'Person',
-          '@id': 'https://jpg-compressor.app/#author',
+          '@id': `${BASE_URL}/#author`,
           name: 'Akash',
           jobTitle: 'Web Developer',
           nationality: {
@@ -33,7 +35,7 @@ export function StructuredData() {
       },
       {
         '@type': 'HowTo',
-        '@id': 'https://jpg-compressor.app/#howto',
+        '@id': `${BASE_URL}/#howto`,
         name: 'How to Compress JPG Images Online in 3 Steps',
         description: 'Compress JPG, JPEG, PNG, or WebP images online quickly and for free without losing picture quality.',
         step: [
@@ -41,25 +43,25 @@ export function StructuredData() {
             '@type': 'HowToStep',
             name: 'Upload JPG Images',
             text: 'Drag and drop your JPG or PNG files into the compressor dropzone or click to select from your device.',
-            url: 'https://jpg-compressor.app/#upload',
+            url: `${BASE_URL}/#upload`,
           },
           {
             '@type': 'HowToStep',
             name: 'Automatic Intelligent Compression',
             text: 'JPG Compressor automatically quantizes colors and optimizes Huffman coding tables to cut file size by 60% to 80%.',
-            url: 'https://jpg-compressor.app/#compress',
+            url: `${BASE_URL}/#compress`,
           },
           {
             '@type': 'HowToStep',
             name: 'Download Compressed Pictures',
             text: 'Download optimized pictures individually or download all compressed photos together in a single ZIP archive.',
-            url: 'https://jpg-compressor.app/#download',
+            url: `${BASE_URL}/#download`,
           },
         ],
       },
       {
         '@type': 'FAQPage',
-        '@id': 'https://jpg-compressor.app/#faq',
+        '@id': `${BASE_URL}/#faq`,
         mainEntity: [
           {
             '@type': 'Question',
