@@ -71,12 +71,16 @@ export const metadata: Metadata = {
   alternates: {
     canonical: '/',
   },
+  verification: {
+    google: '0fjxQfwx8lDkG3zx2xNGq4T4xWMWt4jWX3YyMZfPt3I',
+  },
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
       <head>
+        <meta name="google-site-verification" content="0fjxQfwx8lDkG3zx2xNGq4T4xWMWt4jWX3YyMZfPt3I" />
         <StructuredData />
       </head>
       <body suppressHydrationWarning>{children}</body>
