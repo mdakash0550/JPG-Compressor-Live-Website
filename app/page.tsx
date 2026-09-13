@@ -409,11 +409,16 @@ export default function HomePage() {
       <main className="flex-1 max-w-3xl w-full mx-auto px-3.5 sm:px-5 py-4 sm:py-6">
         {/* Compact Title banner */}
         <div className="mb-3.5">
-          <h1 className="text-xl sm:text-2xl font-bold text-zinc-900 tracking-tight">
-            JPG Compressor
-          </h1>
-          <p className="text-xs text-zinc-500 mt-0.5">
-            Free online batch image compressor by <span className="font-semibold text-zinc-700">Akash (Bangladeshi Web Developer)</span>. Reduce JPG, JPEG, PNG, and WebP file size up to 80% without losing quality.
+          <div className="flex items-center gap-2 flex-wrap mb-1">
+            <h1 className="text-xl sm:text-2xl font-bold text-zinc-900 tracking-tight">
+              JPG Compressor
+            </h1>
+            <span className="text-[11px] font-semibold px-2 py-0.5 rounded-full bg-amber-100 text-amber-900 border border-amber-200">
+              Reduce Image Size in KB
+            </span>
+          </div>
+          <p className="text-xs text-zinc-600 mt-0.5">
+            Free online batch image compressor by <span className="font-semibold text-zinc-800">Akash (Bangladeshi Web Developer)</span>. Reduce JPG, JPEG, PNG, and WebP photo size to 100KB, 200KB, or 50KB by up to 80% with lossless clarity.
           </p>
         </div>
 

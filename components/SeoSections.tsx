@@ -19,25 +19,71 @@ import {
 
 const FAQ_ITEMS = [
   {
-    q: 'How does JPG Compressor reduce file sizes without losing quality?',
-    a: 'JPG Compressor uses intelligent color quantization and MozJPEG encoding algorithms. By eliminating redundant metadata and selectively reducing similar color shades that the human eye cannot distinguish, file size decreases by 60% to 80% while retaining sharp clarity.',
+    q: 'How do I compress JPG or reduce image size to 100KB or 200KB?',
+    a: 'Simply drag and drop your photos into JPG Compressor. Our automatic optimizer analyzes the image, strips bloated EXIF metadata, and applies intelligent MozJPEG quantization to achieve target weights such as 100KB, 200KB, or 50KB while preserving crisp resolution and color fidelity for job portals, passports, and exam forms.',
   },
   {
-    q: 'Is there a limit on how many images I can compress in batch?',
-    a: 'You can upload and batch compress dozens of photos simultaneously. We support JPG, JPEG, PNG, and WebP images up to 50MB per file with single or instant ZIP archive bulk downloads.',
+    q: 'How does JPG Compressor reduce file sizes without losing visual quality?',
+    a: 'JPG Compressor uses intelligent color quantization and MozJPEG encoding algorithms. By eliminating redundant metadata and selectively reducing similar color shades that the human eye cannot distinguish, file size decreases by 60% to 80% with lossless visual quality.',
   },
   {
-    q: 'Are my uploaded images safe and private?',
+    q: 'Is there a limit on how many images I can batch compress?',
+    a: 'You can upload and batch compress dozens of photos simultaneously. We support JPG, JPEG, PNG, and WebP images up to 50MB per file with individual image downloads or an instant bulk ZIP archive download.',
+  },
+  {
+    q: 'Why is image compression crucial for website SEO and Core Web Vitals?',
+    a: 'Large, unoptimized images are the #1 cause of slow page loading and poor Largest Contentful Paint (LCP) scores. Compressing images reduces server bandwidth, accelerates page speed on mobile devices, and significantly improves your Google search rankings.',
+  },
+  {
+    q: 'Are my uploaded images and confidential documents safe and private?',
     a: 'Absolutely. Privacy is our top priority. Your images are processed in-memory securely and are never permanently stored, indexed, or shared with any third party. Once you download your files or clear the queue, they are instantly discarded.',
   },
   {
-    q: 'Can I resize dimensions or customize compressed file suffixes?',
+    q: 'Can I resize image dimensions or customize compressed file suffixes?',
     a: 'Yes! Click the "Options" button in the top navigation bar to enable automatic dimension resizing (Fit, Scale, Cover) and customize your output filename suffix (such as "-min" or "-compressed").',
   },
   {
     q: 'Who developed this JPG Compressor website?',
     a: 'This web application was designed and engineered by Akash, a Bangladeshi Web Developer & Software Engineer passionate about crafting fast, accessible, and privacy-focused web utilities for creators worldwide.',
   },
+];
+
+const TARGET_SIZES = [
+  {
+    size: '100 KB',
+    label: 'Job & Govt. Portals',
+    description: 'Standard maximum size required by civil service, job application forms, and online exam portals.',
+  },
+  {
+    size: '200 KB',
+    label: 'Passport & Visa Photos',
+    description: 'Ideal for official passport photos, visa application uploads, and digital identification badges.',
+  },
+  {
+    size: '50 KB',
+    label: 'Signature & Thumbnails',
+    description: 'Perfect for digital signatures, profile avatars, and fast-loading web thumbnail previews.',
+  },
+  {
+    size: 'Web Ready',
+    label: 'Website SEO & Blogs',
+    description: 'Cut 60%–80% payload for Shopify, WordPress, and Next.js sites to ace Google Core Web Vitals.',
+  },
+];
+
+const POPULAR_KEYWORDS = [
+  'Compress JPEG to 100KB',
+  'Reduce Image Size in KB',
+  'Compress JPG without Quality Loss',
+  'Batch Photo Compressor',
+  'Compress JPEG to 200KB',
+  'Compress Image to 50KB',
+  'Free TinyJPG Alternative',
+  'Bulk Image Optimizer',
+  'Passport Photo Size Reducer',
+  'Web Speed & SEO Optimizer',
+  'Lossless Photo Compression',
+  'Convert & Compress WebP',
 ];
 
 export function SeoSections() {
@@ -59,7 +105,7 @@ export function SeoSections() {
             How to Compress JPG & Photos Online in 3 Easy Steps
           </h2>
           <p className="text-xs text-zinc-600 max-w-2xl mt-0.5">
-            Optimize your images for websites, social media, portfolios, or email attachments in seconds.
+            Optimize your images for websites, job forms, social media, portfolios, or email attachments in seconds.
           </p>
         </div>
 
@@ -90,7 +136,7 @@ export function SeoSections() {
                 </span>
                 <Cpu className="w-4 h-4 text-zinc-400" />
               </div>
-              <h3 className="text-xs font-bold text-zinc-900 mb-1">Smart Compression</h3>
+              <h3 className="text-xs font-bold text-zinc-900 mb-1">Smart MozJPEG Compression</h3>
               <p className="text-[11px] text-zinc-500 leading-relaxed">
                 Our engine optimizes quantization tables & chroma subsampling to reduce weight by up to 80%.
               </p>
@@ -120,6 +166,32 @@ export function SeoSections() {
         </div>
       </section>
 
+      {/* Target File Sizes Section (Targeting 100KB, 200KB, 50KB Searches) */}
+      <section className="space-y-3" aria-labelledby="target-sizes-title">
+        <div>
+          <h2 id="target-sizes-title" className="text-lg sm:text-xl font-bold text-zinc-900 tracking-tight">
+            Reduce Image Size in KB for Any Requirement
+          </h2>
+          <p className="text-xs text-zinc-600 mt-0.5">
+            Meet strict online upload requirements for job applications, passports, and website performance.
+          </p>
+        </div>
+
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3">
+          {TARGET_SIZES.map((item, idx) => (
+            <div key={idx} className="p-3.5 rounded-xl bg-white border border-zinc-200 shadow-xs flex flex-col justify-between">
+              <div>
+                <span className="inline-block px-2 py-0.5 rounded text-[11px] font-bold bg-amber-100 text-amber-900 mb-1.5">
+                  {item.size}
+                </span>
+                <h3 className="text-xs font-bold text-zinc-900">{item.label}</h3>
+                <p className="text-[11px] text-zinc-500 mt-1 leading-relaxed">{item.description}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
+
       {/* 2. Key Advantages & Benefits */}
       <section className="space-y-4" aria-labelledby="why-choose-title">
         <div>
@@ -127,7 +199,7 @@ export function SeoSections() {
             Why Choose JPG Compressor for Your Web & Photo Workflow?
           </h2>
           <p className="text-xs text-zinc-600 mt-0.5">
-            Designed specifically to improve website loading speeds, Core Web Vitals, and SEO rankings.
+            Designed specifically to improve website loading speeds, Core Web Vitals, and Google SEO rankings.
           </p>
         </div>
 
@@ -179,6 +251,23 @@ export function SeoSections() {
               </p>
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* Popular Keyword Intent Tags */}
+      <section className="space-y-2.5">
+        <h3 className="text-xs font-bold uppercase tracking-wider text-zinc-500">
+          Popular Search Topics & Optimization Modes
+        </h3>
+        <div className="flex flex-wrap gap-1.5">
+          {POPULAR_KEYWORDS.map((kw, i) => (
+            <span
+              key={i}
+              className="px-2.5 py-1 rounded-lg bg-white border border-zinc-200 text-[11px] font-medium text-zinc-700 hover:border-amber-400 hover:text-zinc-900 transition-colors cursor-default"
+            >
+              {kw}
+            </span>
+          ))}
         </div>
       </section>
 
